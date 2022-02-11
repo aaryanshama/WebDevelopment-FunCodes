@@ -6,13 +6,13 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: pink;
+    background-color: red;
     height: 50px;
     width: 50px;
     transform: rotate(-45deg) ;
   }
   .heart::after {
-    background-color: pink;
+    background-color: red;
     content: "";
     border-radius: 50%;
     position: absolute;
@@ -23,7 +23,7 @@
   }
   .heart::before {
     content: "";
-    background-color: pink;
+    background-color: red;
     border-radius: 50%;
     position: absolute;
     width: 50px;
