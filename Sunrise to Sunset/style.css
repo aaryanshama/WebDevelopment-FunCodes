@@ -1,0 +1,70 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+#sky{
+  height: 10rem;
+  animation: 15s travel infinite;
+
+}
+#land{
+  background-color: rgba(36, 213, 36, 0.699);
+  height: 70rem;
+}
+#sun{
+  height: 120px;
+  width: 120px;
+  background-color: #ffff00;
+  border-radius: 50%;
+  position: relative;
+  animation: 11s traveltwo infinite;
+  animation-timing-function: linear;
+}
+@keyframes travel {
+  0%{
+      background-color:#023e8a;
+  }
+  20%{
+      background-color: #0077b6;
+  }
+  40%{
+      background-color: #00b4d8;
+  }
+  60%{
+      background-color: #90e0ef;
+  }
+  78%{
+      background-color:#00b4d8
+  }
+  90%{
+      background-color: #0077b6;
+  }
+  100%{
+      background-color: #023e8a;;
+  }
+
+}
+@keyframes traveltwo {
+  0%{
+      transform: translate3d(0px,40px,0);
+      background-color: rgb(235, 92, 67);
+      
+  }
+  33%{
+
+      transform: translate3d(28rem,-2.4rem,0);
+      background-color: rgb(220, 223, 62);
+      
+  }
+  66%{
+
+      transform: translate3d(56rem,-2.4rem,0);
+      
+  }
+  100%{
+
+      transform: translate3d(90rem,2.4rem,0);
+      background-color: rgb(235, 92, 67);
+      
+  }
+}
