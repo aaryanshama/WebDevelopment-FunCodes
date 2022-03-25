@@ -1,0 +1,45 @@
+body{
+  background-color:#131313;
+  margin:0;
+  height:100vh;
+  display:grid;
+  place-items:center;
+}
+
+.text{
+  color:#fff;
+  text-transform:capitalize;
+  font-family:monospace;
+  font-size:20px;
+  white-space:nowrap;
+  overflow:hidden;
+  max-width:0;
+  animation: typing 3s steps(23) infinite;
+}
+
+.text-container::after{
+  content:" |";
+  animation:blink 1s step-end infinite;
+  background-color:#fff;
+}
+
+.text-container{
+  display:flex;
+  align-items:center;
+}
+
+@keyframes typing{
+  to{
+    max-width:23ch;
+  }
+}
+
+@keyframes blink{
+  25%{
+    opacity:0
+  }
+  
+  50%,75%,100%{
+    opacity:1;
+  }
+}
