@@ -1,0 +1,53 @@
+body{
+  height:100vh;
+  margin:0;
+  display:grid;
+  place-items:center;
+}
+
+.gooey-loader{
+  width:200px;
+  height:100px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  filter:blur(12px) contrast(40);
+  background-color:#fff;
+}
+
+.ball{
+  width:50px;
+  height:50px;
+  background-color:#000;
+  border-radius:50%;
+}
+
+.ball1{
+  transform:translateX(-60%);
+  animation:moveRight 1s linear infinite alternate;
+}
+
+.ball2{
+  transform:translateX(60%);
+  animation:moveLeft 1s linear infinite alternate;
+}
+
+@keyframes moveRight{
+  from{
+    transform:translateX(-60%);
+  }
+  
+ to{
+    transform:translateX(160%);
+  }
+}
+
+@keyframes moveLeft{
+  from{
+    transform:translateX(60%);
+  }
+  
+ to{
+    transform:translateX(-160%);
+  }
+}
