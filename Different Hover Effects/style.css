@@ -1,0 +1,229 @@
+.container{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.container button{
+  margin:10px;
+}
+
+/* btn1 styling */
+
+.btn1 {
+  padding: 16px 48px;
+  background: none;
+  border: 2px solid #131313;
+  color: #131313;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.btn1::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background-color: #ff7a00;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.btn1:hover::before {
+  width: 100%;
+}
+
+.btn1:hover {
+  color: #fff;
+}
+
+/* btn2 styling */
+
+.btn2 {
+  padding: 16px 48px;
+  background: none;
+  border: 2px solid #131313;
+  color: #131313;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.btn2::before,
+.btn2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ff7a00;
+  top: 0;
+  left: 0;
+  transition: clip-path 0.3s;
+  z-index: -1;
+}
+
+.btn2::before {
+  clip-path: circle(0 at 0 0);
+}
+
+.btn2::after {
+  clip-path: circle(0 at 100% 100%);
+}
+
+.btn2:hover {
+  color: #fff;
+}
+
+.btn2:hover::before {
+  clip-path: circle(100% at 0 0);
+}
+
+.btn2:hover::after {
+  clip-path: circle(100% at 100% 100%);
+}
+
+/* btn3 styling */
+
+.btn3 {
+  padding: 16px 48px;
+  background: none;
+  border: 2px solid #131313;
+  color: #131313;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn3:hover {
+  box-shadow: 0 0 0 5px #fff, 0 0 0 10px #ff7a00;
+  border: 2px solid #ff7a00;
+  transform: scale(0.9);
+  color: #ff7a00;
+}
+
+/* btn4 styling */
+
+.btn4 {
+  padding: 16px 48px;
+  background: none;
+  border: 2px solid #131313;
+  color: #131313;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.btn4::before,
+.btn4::after {
+  --offset: 2px;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.btn4::before {
+  border-top: 2px solid #ff7a00;
+  border-left: 2px solid #ff7a00;
+  top: var(--offset);
+  left: var(--offset);
+}
+
+.btn4::after {
+  border-bottom: 2px solid #ff7a00;
+  border-right: 2px solid #ff7a00;
+  bottom: var(--offset);
+  right: var(--offset);
+}
+
+.btn4:hover {
+  background-color: #ff7a00;
+  color: #fff;
+  transition-delay: 0.3s;
+}
+
+.btn4:hover::before,
+.btn4:hover::after {
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  opacity: 1;
+}
+
+/* btn5 styling */
+
+.btn5 {
+  padding: 16px 48px;
+  background: none;
+  border: 2px solid #131313;
+  color: #131313;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.btn5::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 120%;
+  background-color: rgba(255, 255, 255, 0.4);
+  top: 50%;
+  transform: skewX(30deg) translate(-150%, -50%);
+  transition: all 0.5s;
+}
+
+.btn5:hover {
+  background-color: #ff7a00;
+  color: #fff;
+}
+
+.btn5:hover::before {
+  transform: skewX(30deg) translate(150%, -50%);
+  transition-delay: 0.1s;
+}
+
+/* btn6 styling */
+
+.btn6 {
+  padding: 16px 48px;
+  background: none;
+  border: 2px solid #131313;
+  color: #131313;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.btn6::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ff7a00;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  z-index: -1;
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.btn6:hover::before {
+  transform: scaleY(1);
+  transform-origin: bottom;
+}
+
+.btn6:hover {
+  color: #fff;
+}
