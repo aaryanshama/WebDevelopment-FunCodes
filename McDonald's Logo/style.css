@@ -1,0 +1,54 @@
+body {
+  --bg-clr: #f7f7f7;
+  background-color: var(--bg-clr);
+}
+
+.mc-donalds {
+  display: inline-flex;
+  position: relative;
+}
+
+.outer-ellipse {
+  width: 110px;
+  height: 300px;
+  background-color: #ffc72c;
+  border-radius: 50%;
+  position: relative;
+}
+
+.outer-ellipse:first-child {
+  margin-right: -20px;
+}
+
+.inner-ellipse {
+  width: 65px;
+  height: 270px;
+  background-color: var(--bg-clr);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.mc-donalds::before,
+.mc-donalds::after {
+  content: "";
+  position: absolute;
+  background-color: var(--bg-clr);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mc-donalds::after {
+  width: 220px;
+  height: 150px;
+  bottom: -15px;
+}
+
+.mc-donalds::before {
+  width: 30px;
+  height: 20px;
+  bottom: 130px;
+  z-index: 1;
+}
