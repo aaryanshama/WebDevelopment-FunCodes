@@ -1,0 +1,27 @@
+body {
+  /* to center the logo within body */
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linked-in {
+  width: 300px;
+  height: 300px;
+  background-color: #2867b2;
+  border-radius: 6%;
+  position: relative;
+}
+
+.linked-in::before {
+  content: "in";
+  font-family: "Source Sans Pro";
+  color: #fff;
+  font-size: 280px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
