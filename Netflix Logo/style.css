@@ -1,0 +1,52 @@
+body{
+  --bg-clr:#111;
+  height:100vh;
+  background-color:var(--bg-clr);
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.netflix-logo{
+  width:215px;
+  height:400px;
+  position:relative;
+}
+
+.netflix-logo::before{
+  content:"";
+  position:absolute;
+  width:150%;
+  height:45px;
+  border-radius:50%;
+  background:var(--bg-clr);
+  z-index:2;
+  bottom:0;
+  left:50%;
+  transform:translate(-50%,45%);
+}
+
+.netflix-logo > div{
+  width:75px;
+  height:100%;
+  position:absolute;
+
+}
+
+div.middle-bar{
+  transform-origin:top left;
+  left:0;
+  transform:skewX(20deg);
+  box-shadow:0 0 20px rgba(0,0,0,0.7);
+  z-index:1;  
+  background-color:#E50914;
+}
+
+.left-bar,.right-bar{
+  background-color:#b50c14;
+}
+
+.right-bar{
+  right:0;  
+}
